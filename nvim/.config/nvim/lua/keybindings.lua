@@ -20,10 +20,14 @@ keymap('n', '<leader><leader>', ':NvimTreeToggle<CR>', opts)
 -- Runner
 keymap('n', '<F5>', '<cmd> Run <cr>', opts)
 
+-- Colorscheme TODO
+-- keymap('n', '<F6>', ':Telescope colorscheme<CR>', opts)
+
 -- Telescope bindings
 keymap('n','<leader>f', ':Telescope find_files<CR>', opts)
 keymap('n','<leader>g', ':Telescope live_grep<CR>', opts)
 keymap('n','<leader>b', ':Telescope buffers<CR>', opts)
+keymap('n','<leader>r', ':Telescope registers<CR>', opts)
 
 
 -- hop.nvim binds

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+
+alias \
+	nv="nvim"\
+	...="devour"\
+	ff="... firefox; exit"\
+	pp="... firefox --private-window;exit"\
+	z="... zathura"\
+	proj="cd ~/Projects"
+
+#Verbosity and additional information, or colors
+#alias \
+#	ls= "ls -hN --color=auto --group-directories-first" \
+	#grep="grep --color=auto" 
+

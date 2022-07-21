@@ -46,6 +46,7 @@ require('packer').startup(function()
 	use 'akinsho/toggleterm.nvim'
 	use 'windwp/nvim-autopairs'
 	use 'windwp/nvim-ts-autotag'
+	use 'ellisonleao/gruvbox.nvim'
 end)
 
 pkgs = {
@@ -62,13 +63,11 @@ pkgs = {
 	'lsp',
 	'treesitter',
 	'cmp',
-	'toggleterm'
+	'toggleterm',
+	'colorscheme'
 
 }
 
 for _, package in pairs(pkgs) do
 	require('config.' .. package)
 end
-
-
-require('pywal').setup()
