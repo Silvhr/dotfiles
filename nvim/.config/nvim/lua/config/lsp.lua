@@ -3,6 +3,7 @@ require'lspconfig'.clangd.setup{}
 
 --lsp installer
 require("nvim-lsp-installer").setup {}
+require'lspconfig'.emmet_ls.setup{}
 require'lspconfig'.sumneko_lua.setup {
   settings = {
     Lua = {

@@ -1,4 +1,4 @@
-require('packer').startup(function()	
+require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'norcalli/nvim-colorizer.lua'
@@ -23,7 +23,6 @@ require('packer').startup(function()
 	'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	  requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 	use 'lewis6991/gitsigns.nvim'
 	use 'terrortylor/nvim-comment'
 	use  'p00f/cphelper.nvim'
@@ -45,15 +44,14 @@ require('packer').startup(function()
 	use 'rafamadriz/friendly-snippets'
 	use 'akinsho/toggleterm.nvim'
 	use 'windwp/nvim-autopairs'
-	use 'windwp/nvim-ts-autotag'
 	use 'ellisonleao/gruvbox.nvim'
 end)
 
-pkgs = {
+local pkgs = {
 	'nvim-surround',
-	'neogit',
 	'bufferline',
 	'nvim_comment',
+        'autopairs',
 	'gitsigns',
 	'neoscroll',
 	'nvim-tree',

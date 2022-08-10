@@ -11,5 +11,6 @@ alias \
 	pp="... firefox --private-window;exit"\
 	z="... zathura"\
 	proj="cd ~/Projects"\
+        bottles="... flatpak run com.usebottles.bottles"\
  	ls="ls -hNF --color=auto --group-directories-first"\
 	grep="grep --color=auto" 

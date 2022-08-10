@@ -1,6 +1,10 @@
 -- General
 vim.opt.mouse = 'a'
 
+-- tabs
+vim.opt.autoindent = true
+vim.opt.expandtab = true
+
 -- highlight current line and column
 vim.opt.cursorline = true
 -- vim.opt.cursorcolumn = true

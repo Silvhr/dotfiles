@@ -13,9 +13,10 @@ configs.setup({
 	autopairs = {
 		enable = true,
 	},
-	autotag = {
-		enable = true,
-	},
-
+        highlight = {
+                enable = true,
+                diable = { "" },
+                additional_vim_regex_highlighting = true,
+        },
 	indent = { enable = true, disable = { "python", "css", "yaml" } },
 })
