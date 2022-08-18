@@ -12,4 +12,4 @@
 
 ###TODO
 bracey.vim
-
+firenvim autocmd to write [automatically](https://github.com/glacambre/firenvim#automatically-syncing-changes-to-the-page)

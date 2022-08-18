@@ -45,6 +45,10 @@ require('packer').startup(function()
 	use 'akinsho/toggleterm.nvim'
 	use 'windwp/nvim-autopairs'
 	use 'ellisonleao/gruvbox.nvim'
+        use {
+            'glacambre/firenvim',
+            run = function() vim.fn['firenvim#install'](0) end
+        }
 end)
 
 local pkgs = {
@@ -62,8 +66,8 @@ local pkgs = {
 	'treesitter',
 	'cmp',
 	'toggleterm',
-	'colorscheme'
-
+	'colorscheme',
+        'firenvim'
 }
 
 for _, package in pairs(pkgs) do
