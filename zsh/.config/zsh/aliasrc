@@ -6,11 +6,20 @@
 
 alias \
 	nv="nvim"\
+	proj="cd ~/Projects"
+
+#not a good solution but whatever
+if [[ "$WSLENV" ]]; then
+	alias \
+		neo="neovide.exe --wsl" \
+		cs="cd /mnt/c/Users/Silvhr/Documents/School/CSCE121/" \
+		pic="cd /mnt/c/Users/Silvhr/Pictures/"
+else
 	...="devour"\
 	ff="... firefox; exit"\
 	pp="... firefox --private-window;exit"\
-	z="... zathura"\
-	proj="cd ~/Projects"
+	z="... zathura"
+fi
 
 #Verbosity and additional information, or colors
 #alias \

@@ -23,7 +23,6 @@ require('packer').startup(function()
 	'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	  requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 	use 'lewis6991/gitsigns.nvim'
 	use 'terrortylor/nvim-comment'
 	use  'p00f/cphelper.nvim'
@@ -47,11 +46,11 @@ require('packer').startup(function()
 	use 'windwp/nvim-autopairs'
 	use 'windwp/nvim-ts-autotag'
 	use 'ellisonleao/gruvbox.nvim'
+	use 'Mofiqul/dracula.nvim'
 end)
 
 pkgs = {
 	'nvim-surround',
-	'neogit',
 	'bufferline',
 	'nvim_comment',
 	'gitsigns',
