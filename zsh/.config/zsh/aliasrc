@@ -17,6 +17,7 @@ if [[ "$WSLENV" ]]; then
 		cs="cd /mnt/c/Users/Silvhr/Documents/School/CSCE121/" \
 		pic="cd /mnt/c/Users/Silvhr/Pictures/"
 else
+        alias \
 	...="devour"\
 	ff="... firefox; exit"\
 	pp="... firefox --private-window;exit"\
