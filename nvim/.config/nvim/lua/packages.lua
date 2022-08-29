@@ -1,4 +1,4 @@
-require('packer').startup(function()	
+require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'norcalli/nvim-colorizer.lua'
@@ -44,15 +44,19 @@ require('packer').startup(function()
 	use 'rafamadriz/friendly-snippets'
 	use 'akinsho/toggleterm.nvim'
 	use 'windwp/nvim-autopairs'
-	use 'windwp/nvim-ts-autotag'
 	use 'ellisonleao/gruvbox.nvim'
 	use 'Mofiqul/dracula.nvim'
+        use {
+            'glacambre/firenvim',
+            run = function() vim.fn['firenvim#install'](0) end
+        }
 end)
 
-pkgs = {
+local pkgs = {
 	'nvim-surround',
 	'bufferline',
 	'nvim_comment',
+        'autopairs',
 	'gitsigns',
 	'neoscroll',
 	'nvim-tree',
@@ -63,8 +67,8 @@ pkgs = {
 	'treesitter',
 	'cmp',
 	'toggleterm',
-	'colorscheme'
-
+	'colorscheme',
+        'firenvim'
 }
 
 for _, package in pairs(pkgs) do

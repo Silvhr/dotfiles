@@ -16,5 +16,5 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export CARGO_HOME="$XDG_DATA_HOME"/CARGO_HOME
 
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 source /usr/share/nvm/init-nvm.sh

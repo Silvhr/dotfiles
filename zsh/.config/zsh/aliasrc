@@ -6,6 +6,8 @@
 
 alias \
 	nv="nvim"\
+	grep="grep --color=auto"\
+ 	ls="ls -hNF --color=auto --group-directories-first"\
 	proj="cd ~/Projects"
 
 #not a good solution but whatever
@@ -18,11 +20,7 @@ else
 	...="devour"\
 	ff="... firefox; exit"\
 	pp="... firefox --private-window;exit"\
-	z="... zathura"
+        todo="... firefox --new-tab https://todoist.com/app/today; exit"\
+	z="... zathura"\
+        bottles="... flatpak run com.usebottles.bottles"
 fi
-
-#Verbosity and additional information, or colors
-#alias \
-#	ls= "ls -hN --color=auto --group-directories-first" \
-	#grep="grep --color=auto" 
-
