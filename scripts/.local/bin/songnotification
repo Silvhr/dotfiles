@@ -1,0 +1,7 @@
+#!/bin/sh
+
+#TODO use sed or awk for only one metadata call
+song=$(playerctl metadata --player=spotifyd --format "Title: {{ xesam:title }}\nArtist: {{ xesam:artist }}\nAlbum: {{ xesam:album }}" --follow)
+COVER=/tmp/cover.jpg
+curl -o "$COVER" -s "$(playerctl metadata --player=spotifyd --format "{{mpris:artUrl}}")"
+notify-send "Music Player" "$song" --icon="$COVER"

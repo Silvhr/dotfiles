@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Prints the current volume or 🔇 if muted.
+
+case $BLOCK_BUTTON in
+	1) ;;
+	2) pkill -USR1 redshift ;;
+	3) notify-send "💡🔴 redshift toggle" "\- Toggles Redshift.
+- Click to toggle." ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+pkill -USR1 redshift
+
+echo "💡"
