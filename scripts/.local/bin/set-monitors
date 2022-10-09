@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xrandr --output HDMI-0 --auto --output DVI-D-0 --auto --right-of HDMI-0
