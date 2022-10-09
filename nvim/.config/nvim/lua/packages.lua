@@ -2,21 +2,21 @@ require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'norcalli/nvim-colorizer.lua'
-	use { 'AlphaTechnolog/pywal.nvim', as = 'pywal' }
+	-- use { 'AlphaTechnolog/pywal.nvim', as = 'pywal' }
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 	use 'xiyaowong/nvim-transparent'
-	use 'karb94/neoscroll.nvim'
-	use {
-		'phaazon/hop.nvim',
-		branch = 'v2',
-		config = function()
-		-- you can configure Hop the way you like here; see :h hop-config
-		require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-		end
-	}
+	-- use 'karb94/neoscroll.nvim'
+	-- use {
+	-- 	'phaazon/hop.nvim',
+	-- 	branch = 'v2',
+	-- 	config = function()
+	-- 	-- you can configure Hop the way you like here; see :h hop-config
+	-- 	require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+	-- 	end
+	-- }
 	use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 	use "lukas-reineke/indent-blankline.nvim"
 	use {
@@ -46,10 +46,15 @@ require('packer').startup(function()
 	use 'windwp/nvim-autopairs'
 	use 'ellisonleao/gruvbox.nvim'
 	use 'Mofiqul/dracula.nvim'
+        use 'gelguy/wilder.nvim'
+        use 'jose-elias-alvarez/null-ls.nvim'
+        use 'romgrk/fzy-lua-native'
         use {
             'glacambre/firenvim',
             run = function() vim.fn['firenvim#install'](0) end
         }
+        use 'ThePrimeagen/harpoon'
+        -- use 'andweeb/presence.nvim'
 end)
 
 local pkgs = {
@@ -58,7 +63,7 @@ local pkgs = {
 	'nvim_comment',
         'autopairs',
 	'gitsigns',
-	'neoscroll',
+	-- 'neoscroll',
 	'nvim-tree',
 	'colorizer',
 	'lualine',
@@ -68,6 +73,9 @@ local pkgs = {
 	'cmp',
 	'toggleterm',
 	'colorscheme',
+	-- 'harpoon',
+	-- 'wilder',
+        -- 'null-ls',
         'firenvim'
 }
 
