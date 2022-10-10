@@ -73,9 +73,9 @@ local pkgs = {
 	'cmp',
 	'toggleterm',
 	'colorscheme',
-	-- 'harpoon',
-	-- 'wilder',
-        -- 'null-ls',
+	'harpoon',
+	'wilder',
+        'null-ls',
         'firenvim'
 }
 
