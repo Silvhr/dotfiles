@@ -13,9 +13,13 @@ alias \
 #not a good solution but whatever
 if [[ "$WSLENV" ]]; then
 	alias \
-		neo="neovide.exe --wsl" \
-		cs="cd /mnt/c/Users/Silvhr/Documents/School/CSCE121/" \
-		pic="cd /mnt/c/Users/Silvhr/Pictures/"
+        neo="neovide.exe --wsl" \
+        cs="cd /mnt/c/Users/Silvhr/Documents/School/CSCE121/" \
+        pic="cd /mnt/c/Users/Silvhr/Pictures/"\
+        clip="clip.exe"\
+        notes="cd /mnt/c/Users/Silvhr/Documents/Obsidian-Backup/"\
+        dl="cd /mnt/c/Users/Silvhr/Downloads/"\
+        paste="powershell.exe Get-Clipboard | sed 's/\r//'"
 else
         alias \
 	...="devour"\
