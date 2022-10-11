@@ -1,12 +1,21 @@
-require("null-ls").setup({
+local null_ls_status_ok, null_ls = pcall(require, "null-ls")
+if not null_ls_status_ok then
+  return
+end
+
+local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
+null_ls.setup({
+    debug = false,
     sources = {
-        require("null-ls").builtins.formatting.stylua,
-        require("null-ls").builtins.diagnostics.eslint,
-        require("null-ls").builtins.formatting.prettier,
-        require("null-ls").builtins.completion.spell,
-        require("null-ls").builtins.formatting.rustywind,
-        require("null-ls").builtins.formatting.tidy,
-        require("null-ls").builtins.diagnostics.flake8,
-        require("null-ls").builtins.formatting.black,
+        formatting.stylua,
+        diagnostics.eslint,
+        formatting.uncrustify,
+        formatting.prettier,
+        -- completion.spell,
+        -- formatting.rustywind,
+        -- formatting.tidy,
+        -- diagnostics.flake8,
+        formatting.black,
     },
 })
