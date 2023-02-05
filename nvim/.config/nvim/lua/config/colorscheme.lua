@@ -1,6 +1,6 @@
 vim.o.background = "dark" -- or "light" for light mode
 -- vim.cmd([[colorscheme gruvbox]])
-vim.cmd( [[colorscheme dracula]] )
+vim.cmd( [[colorscheme tokyonight-storm]] )
 -- require('pywal').setup()
 
 -- require("transparent").setup({

@@ -18,4 +18,4 @@ esac
 
 vol="$(pamixer --source alsa_input.usb-DCMT_Technology_USB_Condenser_Microphone_214b206000000178-00.mono-fallback --get-volume)"
 
-echo "🎤$vol%"
+echo "Microphone: $vol%"

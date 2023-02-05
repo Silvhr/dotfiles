@@ -26,6 +26,7 @@ fi
 
 
 betterlockscreen -u "$bgloc" >/dev/null 2>&1 &
-pkill sxhkd;sxhkd
+pkill sxhkd;sxhkd &
+xrdb ~/.Xresources &
 pywalfox update >/dev/null 2>&1 
 #xwallpaper --zoom "$bgloc"

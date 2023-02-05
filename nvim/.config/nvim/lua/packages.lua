@@ -46,7 +46,6 @@ require("packer").startup(function()
 	use("akinsho/toggleterm.nvim")
 	use("windwp/nvim-autopairs")
 	use("ellisonleao/gruvbox.nvim")
-	use("Mofiqul/dracula.nvim")
 	use("gelguy/wilder.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("romgrk/fzy-lua-native")
@@ -58,6 +57,9 @@ require("packer").startup(function()
 		end,
 	})
 	use("ThePrimeagen/harpoon")
+	--colorschemes
+	use("folke/tokyonight.nvim")
+	use("Mofiqul/dracula.nvim")
 	-- use 'andweeb/presence.nvim'
 end)
 

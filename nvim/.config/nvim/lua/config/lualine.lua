@@ -2,8 +2,7 @@ require('lualine').setup {
   options = {
     icons_enabled = true,
 -- theme = 'pywal-nvim',
-    theme = 'dracula-nvim',
-    -- theme = 'gruvbox',
+    theme = 'tokyonight',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
