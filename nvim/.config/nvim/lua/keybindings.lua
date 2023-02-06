@@ -57,3 +57,6 @@ keymap("n", "<leader>f", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>g", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>b", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>r", ":Telescope registers<CR>", opts)
+
+-- Appearance
+keymap("n", "<F7>", ":TransparentToggle<CR>", opts)
