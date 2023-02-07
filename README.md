@@ -7,3 +7,11 @@ my dots and configs
 
 ### Delete all symlinks (unstow)
 `stow --delete */`
+
+
+#### zsh
+remember to:
+```
+cd .config/zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions
+```

@@ -13,7 +13,7 @@ alias \
 #not a good solution but whatever
 if [[ "$WSLENV" ]]; then
 	alias \
-        neo="neovide.exe --wsl" \
+        neo="/mnt/c/Program\ Files/Neovide/neovide.exe --wsl" \
         cs="cd /mnt/c/Users/Silvhr/Documents/School/CSCE121/" \
         pic="cd /mnt/c/Users/Silvhr/Pictures/"\
         clip="clip.exe"\

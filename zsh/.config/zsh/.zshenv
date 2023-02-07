@@ -17,4 +17,4 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export CARGO_HOME="$XDG_DATA_HOME"/CARGO_HOME
 
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh

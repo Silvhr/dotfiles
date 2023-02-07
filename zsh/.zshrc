@@ -25,7 +25,6 @@ setopt autocd		# Automatically cd into typed directory.
 
 
 #remove compdump
-compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 HISTSIZE=10000
 SAVEHIST=10000
@@ -59,6 +58,7 @@ precmd() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Basic auto/tab complete:
 autoload -U compinit
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
@@ -69,3 +69,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
