@@ -67,6 +67,7 @@ _comp_options+=(globdots)		# Include hidden files.
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
+path+=('/home/silvhr/.local/share/CARGO_HOME/bin/')
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 

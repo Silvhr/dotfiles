@@ -26,6 +26,8 @@ else
 	ff="... firefox; exit"\
 	pp="... firefox --private-window;exit"\
         todo="... firefox --new-tab https://todoist.com/app/today; exit"\
+        speed="... firefox --new-tab https://play.typeracer.com/; exit"\
+        doc="cd ~/Documents/"\
 	z="... zathura"\
         bottles="... flatpak run com.usebottles.bottles"
 fi
