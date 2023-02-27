@@ -29,7 +29,7 @@ require("packer").startup(function()
 	use("p00f/cphelper.nvim")
 	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
 	use("kylechui/nvim-surround")
-	use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+	-- use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
@@ -57,6 +57,7 @@ require("packer").startup(function()
 		end,
 	})
 	use("ThePrimeagen/harpoon")
+	use({ "nvim-neo-tree/neo-tree.nvim", requires={ "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim", "nvim-tree/nvim-web-devicons" } })
 	--colorschemes
 	use("folke/tokyonight.nvim")
 	use("Mofiqul/dracula.nvim")
@@ -70,7 +71,8 @@ local pkgs = {
 	"autopairs",
 	"gitsigns",
 	-- 'neoscroll',
-	"nvim-tree",
+	-- "nvim-tree",
+	"neo-tree",
 	"colorizer",
 	"lualine",
 	"indent_blankline",
@@ -81,7 +83,7 @@ local pkgs = {
 	"colorscheme",
 	"harpoon",
 	"wilder",
-	-- 'which-key',
+	'which-key',
 	"null-ls",
 	"firenvim",
 }
