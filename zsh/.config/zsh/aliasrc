@@ -8,7 +8,8 @@ alias \
 	nv="nvim"\
 	grep="grep --color=auto"\
  	ls="ls -hNF --color=auto --group-directories-first"\
-	proj="cd ~/Projects"
+	proj="cd ~/Projects"\
+        dots="cd ~/dotfiles/"
 
 #not a good solution but whatever
 if [[ "$WSLENV" ]]; then
