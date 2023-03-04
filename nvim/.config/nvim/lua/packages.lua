@@ -61,7 +61,7 @@ require("packer").startup(function()
 	--colorschemes
 	use("folke/tokyonight.nvim")
 	use("Mofiqul/dracula.nvim")
-	-- use 'andweeb/presence.nvim'
+	use 'andweeb/presence.nvim'
 end)
 
 local pkgs = {
@@ -84,6 +84,7 @@ local pkgs = {
 	"harpoon",
 	"wilder",
 	'which-key',
+	'presence',
 	"null-ls",
 	"firenvim",
 }

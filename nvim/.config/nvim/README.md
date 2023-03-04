@@ -9,7 +9,16 @@
 -- install clang
 -- install nvm and npm for tsserver (add source file to zsh/bash file)
 
-
+##Note for future me
+if upon exit you get this error:
+```shell
+.local/state/nvim/shada/main.shada.tmp.X
+```
+do:
+```
+rm -rf ~/.local/state/nvim/shada/main*
+```
 ###TODO
 bracey.vim
 firenvim autocmd to write [automatically](https://github.com/glacambre/firenvim#automatically-syncing-changes-to-the-page)
+potentially [remove](https://vi.stackexchange.com/questions/9570/how-do-i-shadont) files?
