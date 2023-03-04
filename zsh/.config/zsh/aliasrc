@@ -29,5 +29,6 @@ else
         speed="... firefox --new-tab https://play.typeracer.com/; exit"\
         doc="cd ~/Documents/"\
 	z="... zathura"\
+	die="cd ~/Documents/VeryRare/"\
         bottles="... flatpak run com.usebottles.bottles"
 fi

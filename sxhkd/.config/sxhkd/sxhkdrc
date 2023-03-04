@@ -1,0 +1,22 @@
+# lock computer
+ctrl + super + l
+	betterlockscreen -l >/dev/null
+#Scripts
+ctrl + shift + s
+	maimpick-nosave
+
+ctrl + alt + s
+	maimpick-nosave
+
+#Multimedia
+XF86AudioPlay
+	playerctl -p spotifyd play-pause 
+
+XF86AudioNext
+	playerctl -p spotifyd next
+
+XF86AudioPrev
+	playerctl -p spotifyd previous
+
+# XF86AudioRaiseVolume
+# 	playerctl -p spotifyd previous

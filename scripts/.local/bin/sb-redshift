@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Prints the current volume or 🔇 if muted.
+#i dont wanna figure this one out
 
 case $BLOCK_BUTTON in
 	1) ;;
