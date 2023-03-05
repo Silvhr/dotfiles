@@ -61,7 +61,9 @@ require("packer").startup(function()
 	--colorschemes
 	use("folke/tokyonight.nvim")
 	use("Mofiqul/dracula.nvim")
+	--stalking
 	use 'andweeb/presence.nvim'
+	use 'github/copilot.vim'
 end)
 
 local pkgs = {
@@ -86,6 +88,7 @@ local pkgs = {
 	'which-key',
 	'presence',
 	"null-ls",
+	-- "copilot",
 	"firenvim",
 }
 
