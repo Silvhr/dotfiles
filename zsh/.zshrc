@@ -18,9 +18,6 @@ setopt autocd		# Automatically cd into typed directory.
 # setopt interactive_comments
 
 #Load aliases and source other files related to zsh
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc"
-# [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/.zshenv" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/.zshenv"
 
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
@@ -74,7 +71,7 @@ _comp_options+=(globdots)		# Include hidden files.
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-path+=('/home/silvhr/.local/share/CARGO_HOME/bin/')
+# path+=('/home/silvhr/.local/share/CARGO_HOME/bin/')
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
