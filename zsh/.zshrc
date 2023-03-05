@@ -1,3 +1,4 @@
+[ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 # pfetch (here because of weird interaction with p10k
 export PF_SEP=""
 export PF_INFO="ascii title os kernel wm editor shell uptime pkgs memory palette"
@@ -19,46 +20,35 @@ setopt autocd		# Automatically cd into typed directory.
 
 #Load aliases and source other files related to zsh
 
+#my personal files
+plug "$HOME/.config/zsh/alias.zsh"
+plug "$HOME/.config/zsh/env.zsh"
+
+#other plugs
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
+plug "zsh-users/zsh-history-substring-search"
 plug "zap-zsh/supercharge"
+plug "zap-zsh/completions"
+plug "hlissner/zsh-autopair"
+plug "zap-zsh/vim"
+
+plug "zap-zsh/fzf"
+plug "Aloxaf/fzf-tab"
+plug "Freed-Wu/fzf-tab-source"
+
+# plug "wintermi/zsh-gcloud"
+# plug "wintermi/zsh-rust"
+# plug "wintermi/zsh-brew"
+# plug "zap-zsh/nvm"
 plug "zap-zsh/exa"
 plug "zap-zsh/fnm"
-plug "wintermi/zsh-rust"
-# plug "wintermi/zsh-gcloud"
-
 
 #remove compdump
 
 HISTSIZE=10000
 SAVEHIST=10000
 unsetopt beep
-
-#vi mode
-bindkey -v
-export KEYTIMEOUT=1
-
-#Change cursor shape for different vi modes.
-function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] ||
-     [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
-  elif [[ ${KEYMAP} == main ]] ||
-       [[ ${KEYMAP} == viins ]] ||
-       [[ ${KEYMAP} = '' ]] ||
-       [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
-  fi
-}
-zle -N zle-keymap-select
-
-zle-line-init() {
-    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    echo -ne "\e[5 q"
-}
-zle -N zle-line-init
-echo -ne '\e[5 q' # Use beam shape cursor on startup.
-precmd() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -69,12 +59,7 @@ compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # path+=('/home/silvhr/.local/share/CARGO_HOME/bin/')
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

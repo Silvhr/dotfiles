@@ -8,10 +8,9 @@ my dots and configs
 ### Delete all symlinks (unstow)
 `stow --delete */`
 
+### Delete one "package" of symlinks
+'stow --delete $pkgname$'
 
 #### zsh
-remember to:
-```
-cd .config/zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions
-```
+- install zap
+
