@@ -31,5 +31,6 @@ else
         doc="cd ~/Documents/"\
 	z="... zathura"\
 	die="cd ~/Documents/VeryRare/"\
+	# tboi="cd .local/share/Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents/My\ Games/Binding\ of\ Isaac\ Repentance/"
         bottles="... flatpak run com.usebottles.bottles"
 fi
