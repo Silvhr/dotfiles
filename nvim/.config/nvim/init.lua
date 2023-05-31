@@ -1,5 +1,6 @@
 vim.o.guifont = "JetBrainsMono Nerd Font"
-require('general')
-require('packages')
-require('keybindings')
-require('runner')
+require('core.general')
+require('core.plugins')
+require('core.keybindings')
+require('core.runner')
+require('core.config')

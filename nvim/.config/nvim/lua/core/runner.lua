@@ -18,7 +18,7 @@ local debug_command_table = {
     ['c'] = 'gcc -g % -o %:r && gdb ./%:r',
 }
 
-local extra = 'printf \"\\\\n\\\\033[0;33mPlease Press ENTER to continue \\\\033[0m\"; read; exit;'
+local extra = 'printf \"\\\\n Press Enter to Continue!\"; read; exit;'
 
 
 -- To run file run :Run or just press <F5>
