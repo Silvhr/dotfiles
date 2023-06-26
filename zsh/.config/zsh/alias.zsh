@@ -11,26 +11,35 @@ alias \
 	proj="cd ~/Projects"\
         dots="cd ~/dotfiles/"
 
-#not a good solution but whatever
-if [[ "$WSLENV" ]]; then
-	alias \
-        neo="/mnt/c/Program\ Files/Neovide/neovide.exe --wsl" \
-        cs="cd /mnt/c/Users/Silvhr/Documents/School/CSCE121/" \
-        pic="cd /mnt/c/Users/Silvhr/Pictures/"\
-        clip="clip.exe"\
-        notes="cd /mnt/c/Users/Silvhr/Documents/Obsidian-Backup/"\
-        dl="cd /mnt/c/Users/Silvhr/Downloads/"\
-        paste="powershell.exe Get-Clipboard | sed 's/\r//'"
-else
-        alias \
-	...="devour"\
-	ff="... firefox; exit"\
-	pp="... firefox --private-window;exit"\
-        todo="... firefox --new-tab https://todoist.com/app/today; exit"\
-        speed="... firefox --new-tab https://play.typeracer.com/; exit"\
-        doc="cd ~/Documents/"\
-	z="... zathura"\
-	die="cd ~/Documents/VeryRare/"\
-	# tboi="cd .local/share/Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents/My\ Games/Binding\ of\ Isaac\ Repentance/"
-        bottles="... flatpak run com.usebottles.bottles"
-fi
+# this should be set by zsh every time
+case "$OSTYPE" in
+        linux*)
+                if [[ "$WSLENV" ]]; then
+                        alias \
+                        neo="/mnt/c/Program\ Files/Neovide/neovide.exe --wsl" \
+                        cs="cd /mnt/c/Users/Silvhr/Documents/School/CSCE121/" \
+                        pic="cd /mnt/c/Users/Silvhr/Pictures/"\
+                        clip="clip.exe"\
+                        notes="cd /mnt/c/Users/Silvhr/Documents/Obsidian-Backup/"\
+                        dl="cd /mnt/c/Users/Silvhr/Downloads/"\
+                        paste="powershell.exe Get-Clipboard | sed 's/\r//'"
+                else
+                        #arch
+                        alias \
+                        ...="devour"\
+                        ff="... firefox; exit"\
+                        pp="... firefox --private-window;exit"\
+                        todo="... firefox --new-tab https://todoist.com/app/today; exit"\
+                        speed="... firefox --new-tab https://play.typeracer.com/; exit"\
+                        doc="cd ~/Documents/"\
+                        z="... zathura"\
+                        die="cd ~/Documents/VeryRare/"\
+                        # tboi="cd .local/share/Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents/My\ Games/Binding\ of\ Isaac\ Repentance/"
+                        bottles="... flatpak run com.usebottles.bottles"
+                fi
+        ;;
+        darwin*)
+        ;;
+        dragonfly*|freebsd*|netbsd*|openbsd*)
+        ;;
+esac

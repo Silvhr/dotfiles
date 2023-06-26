@@ -24,6 +24,9 @@ setopt autocd		# Automatically cd into typed directory.
 plug "$HOME/.config/zsh/alias.zsh"
 plug "$HOME/.config/zsh/env.zsh"
 
+#p10k
+plug "romkatv/powerlevel10k"
+
 #other plugs
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
@@ -32,6 +35,8 @@ plug "zap-zsh/supercharge"
 plug "zap-zsh/completions"
 plug "hlissner/zsh-autopair"
 plug "zap-zsh/vim"
+plug "MichaelAquilina/zsh-you-should-use"
+plug "chivalryq/zsh-autojump"
 
 plug "zap-zsh/fzf"
 plug "Aloxaf/fzf-tab"
@@ -41,6 +46,9 @@ plug "Freed-Wu/fzf-tab-source"
 # plug "wintermi/zsh-rust"
 # plug "wintermi/zsh-brew"
 # plug "zap-zsh/nvm"
+# plug "olrtg/zsh-fvm"
+# plug "chrishrb/zsh-kubectl"
+
 plug "zap-zsh/exa"
 plug "zap-zsh/fnm"
 
