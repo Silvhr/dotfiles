@@ -1,36 +1,33 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	{"kyazdani42/nvim-web-devicons", name = 'web-devicons'},
-	"norcalli/nvim-colorizer.lua",
-	--  { 'AlphaTechnolog/pywal.nvim', name = 'pywal' },
-	{"nvim-lualine/lualine.nvim", dependencies = { "kyazdani42/nvim-web-devicons", name = 'web-devicons', lazy = true }},
-	"xiyaowong/nvim-transparent",
-	-- 'karb94/neoscroll.nvim,
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "kyazdani42/nvim-web-devicons", name = "web-devicons", lazy = true },
+	},
+	"lewis6991/gitsigns.nvim",
 	"neovim/nvim-lspconfig",
 	"lukas-reineke/indent-blankline.nvim",
 	{
-                "nvim-telescope/telescope.nvim",
-                tag = "0.1.0",
-                dependencies = "nvim-lua/plenary.nvim"
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.0",
+		dependencies = "nvim-lua/plenary.nvim",
 	},
-	"lewis6991/gitsigns.nvim",
 	"terrortylor/nvim-comment",
 	"p00f/cphelper.nvim",
-	{ "akinsho/bufferline.nvim", tag = "v2.*", dependencies = {"kyazdani42/nvim-web-devicons", name = 'web-devicons'} },
+	{ "akinsho/bufferline.nvim", tag = "v2.*", dependencies = { "kyazdani42/nvim-web-devicons", name = "web-devicons" } },
 	"kylechui/nvim-surround",
-	-- use({ "kyazdani42/nvim-tree.lua", dependencies = "kyazdani42/nvim-web-devicons" })
 	"nvim-treesitter/nvim-treesitter",
 	"williamboman/nvim-lsp-installer",
 	"hrsh7th/nvim-cmp",
@@ -55,28 +52,38 @@ local plugins = {
 			vim.fn["firenvim#install"](0)
 		end,
 		config = function()
-                        vim.g.firenvim_config = {
-                          localSettings = {
-                            [".*"] = {
-                              cmdline = "neovim",
-                              takeover = "never",
-                            },
-                          },
-                        }
-                        end
-
+			vim.g.firenvim_config = {
+				localSettings = {
+					[".*"] = {
+						cmdline = "neovim",
+						takeover = "never",
+					},
+				},
+			}
+		end,
 	},
 	"ThePrimeagen/harpoon",
-	{ "nvim-neo-tree/neo-tree.nvim", dependencies={ "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim", "nvim-tree/nvim-web-devicons" } },
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim", "nvim-tree/nvim-web-devicons" },
+	},
+	-- drip
+	"xiyaowong/nvim-transparent",
+	-- 'karb94/neoscroll.nvim,
+	{ "kyazdani42/nvim-web-devicons", name = "web-devicons" },
+	"norcalli/nvim-colorizer.lua",
+	--  { 'AlphaTechnolog/pywal.nvim', name = 'pywal' },
 	--colorschemes
 	"ellisonleao/gruvbox.nvim",
 	"folke/tokyonight.nvim",
 	"Mofiqul/dracula.nvim",
 	--stalking
 	"andweeb/presence.nvim",
-	"github/copilot.vim"
+	"github/copilot.vim",
+	--workflow
+	"epwalsh/obsidian.nvim",
 }
 
 local opts = {}
 
-require("lazy").setup(plugins,opts)
+require("lazy").setup(plugins, opts)
