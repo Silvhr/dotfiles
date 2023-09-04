@@ -17,32 +17,45 @@ local plugins = {
 		dependencies = { "kyazdani42/nvim-web-devicons", name = "web-devicons", lazy = true },
 	},
 	"lewis6991/gitsigns.nvim",
-	"neovim/nvim-lspconfig",
 	"lukas-reineke/indent-blankline.nvim",
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
 		dependencies = "nvim-lua/plenary.nvim",
 	},
-	"terrortylor/nvim-comment",
+--	{
+ --           "numToStr/Comment.nvim",
+  --          opts = {
+   --             -- add any options here
+    --        },
+     --       lazy = false,
+      --  },
+	-- "terrortylor/nvim-comment",
 	"p00f/cphelper.nvim",
 	{ "akinsho/bufferline.nvim", tag = "v2.*", dependencies = { "kyazdani42/nvim-web-devicons", name = "web-devicons" } },
 	"kylechui/nvim-surround",
 	"nvim-treesitter/nvim-treesitter",
 	"williamboman/nvim-lsp-installer",
+
+	"neovim/nvim-lspconfig",
+
 	"hrsh7th/nvim-cmp",
 	"hrsh7th/cmp-buffer",
 	"hrsh7th/cmp-path",
 	"hrsh7th/cmp-cmdline",
 	"hrsh7th/cmp-nvim-lsp",
+
 	"saadparwaiz1/cmp_luasnip",
 	"L3MON4D3/LuaSnip",
 	"rafamadriz/friendly-snippets",
+
 	"akinsho/toggleterm.nvim",
 	"windwp/nvim-autopairs",
 	"gelguy/wilder.nvim",
-	"jose-elias-alvarez/null-ls.nvim",
 	"romgrk/fzy-lua-native",
+	--langs
+	"rust-lang/rust.vim",
+	"simrat39/rust-tools.nvim",
 	"folke/which-key.nvim",
 	{
 		"glacambre/firenvim",
@@ -73,6 +86,7 @@ local plugins = {
 	{ "kyazdani42/nvim-web-devicons", name = "web-devicons" },
 	"norcalli/nvim-colorizer.lua",
 	--  { 'AlphaTechnolog/pywal.nvim', name = 'pywal' },
+
 	--colorschemes
 	"ellisonleao/gruvbox.nvim",
 	"folke/tokyonight.nvim",
