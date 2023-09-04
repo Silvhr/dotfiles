@@ -32,12 +32,13 @@ local plugins = {
       --  },
 	-- "terrortylor/nvim-comment",
 	"p00f/cphelper.nvim",
-	{ "akinsho/bufferline.nvim", tag = "v2.*", dependencies = { "kyazdani42/nvim-web-devicons", name = "web-devicons" } },
+	{ "akinsho/bufferline.nvim", dependencies = { "kyazdani42/nvim-web-devicons", name = "web-devicons" } },
 	"kylechui/nvim-surround",
 	"nvim-treesitter/nvim-treesitter",
-	"williamboman/nvim-lsp-installer",
 
 	"neovim/nvim-lspconfig",
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
 
 	"hrsh7th/nvim-cmp",
 	"hrsh7th/cmp-buffer",
@@ -93,7 +94,8 @@ local plugins = {
 	"Mofiqul/dracula.nvim",
 	--stalking
 	"andweeb/presence.nvim",
-	"github/copilot.vim",
+	"zbirenbaum/copilot.lua",
+	"zbirenbaum/copilot-cmp",
 	--workflow
 	"epwalsh/obsidian.nvim",
 }
