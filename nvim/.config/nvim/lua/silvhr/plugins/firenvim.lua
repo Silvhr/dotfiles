@@ -1,21 +1,25 @@
-local present, _ = pcall(require, "firenvim")
+return {
+	'glacambre/firenvim',
+	 cond = not not vim.g.started_by_firenvim,
+          build = function()
+            require("lazy").load({ plugins = "firenvim", wait = true })
+            vim.fn["firenvim#install"](0)
+          end,
 
-if not present then
-   return
-end
+          -- configure FireNvim here:
+          config = function()
+            vim.g.firenvim_config = {
+              -- config values, like in my case:
+              localSettings = {
+                [".*"] = {
+                  takeover = "never",
+                },
+              },
+            }
+          end
 
-local fn = vim.fn
-local map = vim.keymap.set
-
-vim.g.firenvim_config = {
-  localSettings = {
-    [".*"] = {
-      cmdline = "neovim",
-      -- Only trigger firenvim when <C-E> is pressed in the browser (or whatever
-      -- the key is set to in the extension's settings).
-      takeover = "never",
-    },
-  },
+    -- Lazy load firenvim
+    -- Explanation: https://github.com/folke/lazy.nvim/discussions/463#discussioncomment-4819297
 }
 -- let l:bufname=expand('%:t')
 -- if l:bufname =~? 'github.com'

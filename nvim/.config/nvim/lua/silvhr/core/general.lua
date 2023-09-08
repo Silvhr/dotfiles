@@ -1,5 +1,6 @@
 -- General
 vim.opt.mouse = 'a'
+vim.opt.termguicolors = true
 
 -- tabs
 vim.opt.autoindent = true

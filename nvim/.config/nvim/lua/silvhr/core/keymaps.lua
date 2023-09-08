@@ -32,7 +32,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 --  Nvim-Tree/Neo-Tree (File Browser)
 -- keymap("n", "<leader><Tab>", ":NvimTreeToggle<CR>", opts)
 -- keymap("n", "<leader><Tab>", ":NeoTreeShowToggle<CR>", opts)
-keymap("n", "<Tab>", ":NeoTreeFloatToggle<CR>", opts)
+keymap("n", "<Tab>", ":Neotree toggle<CR>", opts)
 
 -- Runner
 keymap("n", "<F5>", "<cmd> Run <cr>", opts)

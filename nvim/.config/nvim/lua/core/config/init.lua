@@ -1,13 +1,9 @@
 require('core.config.autopairs')
 require('core.config.bufferline')
---require('core.config.bufferline')
 require('core.config.nvim-surround')
 require('core.config.bufferline')
---require('core.config.nvim_comment')
 require('core.config.autopairs')
 require('core.config.gitsigns')
--- 'neoscroll',
--- "nvim-tree",
 require('core.config.neo-tree')
 require('core.config.colorizer')
 require('core.config.lualine')
@@ -22,5 +18,3 @@ require('core.config.mason')
 require('core.config.wilder')
 require('core.config.which-key')
 require('core.config.presence')
--- "copilot",
--- require('firenvim')
