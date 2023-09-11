@@ -2,7 +2,7 @@ return {
   "williamboman/mason.nvim",
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
-    "jayp0521/mason-null-ls.nvim",
+    -- "jayp0521/mason-null-ls.nvim",
   },
   config = function()
     -- import mason
@@ -32,6 +32,8 @@ return {
         "html",
         "cssls",
         "tailwindcss",
+        "clangd",
+        "clang-format",
         "svelte",
         "lua_ls",
         "graphql",

@@ -7,6 +7,7 @@ return {
         --   "AlphaTechnolog/pywal.nvim",
 
 	"xiyaowong/nvim-transparent",
+	"lukas-reineke/indent-blankline.nvim",
 	"p00f/cphelper.nvim",
         "nvim-telescope/telescope.nvim",
 	"folke/tokyonight.nvim",
