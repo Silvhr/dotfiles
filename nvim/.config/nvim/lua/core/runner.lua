@@ -2,7 +2,7 @@ vim.cmd('command! Run :lua run_code()')
 local run_command_table = {
     ['cpp'] = 'g++ % -o %:r && ./%:r',
     ['c'] = 'gcc % -o %:r && ./%:r',
-    ['python'] = 'python %',
+    ['python'] = 'python3 %',
     ['lua'] = 'lua %',
     ['java'] = 'javac % && java %:r',
     ['zsh'] = 'zsh %',
@@ -18,7 +18,7 @@ local debug_command_table = {
     ['c'] = 'gcc -g % -o %:r && gdb ./%:r',
 }
 
-local extra = 'printf \"\\\\n Press Enter to Continue!\"; read; exit;'
+local extra = 'printf \"\\\\n Press Enter to Continue!\""; read; exit;'
 
 
 -- To run file run :Run or just press <F5>

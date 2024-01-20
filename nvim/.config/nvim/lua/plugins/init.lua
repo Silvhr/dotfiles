@@ -1,18 +1,18 @@
 return {
-        "nvim-lua/plenary.nvim", -- lua functions that many plugins use
+    "nvim-lua/plenary.nvim",     -- lua functions that many plugins use
 
-        --"christoomey/vim-tmux-navigator", -- tmux & split window navigation
+    --"christoomey/vim-tmux-navigator", -- tmux & split window navigation
 
-        --"inkarkat/vim-ReplaceWithRegister", -- replace with register contents using motion (gr + motion)
-        --   "AlphaTechnolog/pywal.nvim",
+    --"inkarkat/vim-ReplaceWithRegister", -- replace with register contents using motion (gr + motion)
+    --   "AlphaTechnolog/pywal.nvim",
 
-	"xiyaowong/nvim-transparent",
-	"lukas-reineke/indent-blankline.nvim",
-	"p00f/cphelper.nvim",
-        "nvim-telescope/telescope.nvim",
-	"folke/tokyonight.nvim",
-        "ellisonleao/gruvbox.nvim",
-	"Mofiqul/dracula.nvim",
-	"ThePrimeagen/harpoon",
-	"romgrk/fzy-lua-native",
+    "xiyaowong/nvim-transparent",
+    "lukas-reineke/indent-blankline.nvim",
+    "p00f/cphelper.nvim",
+    "nvim-telescope/telescope.nvim",
+    "folke/tokyonight.nvim",
+    "ellisonleao/gruvbox.nvim",
+    "Mofiqul/dracula.nvim",
+    "ThePrimeagen/harpoon",
+    "romgrk/fzy-lua-native",
 }

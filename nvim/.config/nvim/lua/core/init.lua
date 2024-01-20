@@ -1,3 +1,3 @@
-require("silvhr.core.general")
-require("silvhr.core.keymaps")
-require("silvhr.core.runner")
+require("general")
+require("keymaps")
+require("runner")

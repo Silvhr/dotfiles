@@ -1,8 +1,17 @@
 #!/bin/sh
+launch_spotify() {
+	if [ ! $(pgrep "spotifyd") ]; then
+		spotifyd
+	fi
 
-if [ ! $(pgrep "spotifyd") ]; then
-  spotifyd
+	pkill sxhkd >/dev/null 2>&1
+	sxhkd >/dev/null 2>&1 &
+}
+
+if [ -n "$KITTY_WINDOW_ID" ]; then
+	launch_spotify
+	spt
+else
+	launch_spotify
+	kitty -e "spt" &
 fi
-
-pkill sxhkd; sxhkd&
-spt

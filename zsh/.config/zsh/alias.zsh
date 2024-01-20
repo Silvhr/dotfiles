@@ -3,6 +3,13 @@
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
 
+electron_sucks() {
+    # electron apps are slow and bloated
+    # also im a nerd that uses wayland, and scaling on xwayland is broken on 1080p
+
+    local app="$1"
+    command $app --useOzonePlatform=wayland --enable-features=UseOzonePlatform --ozone-platform=wayland "$@"
+}
 
 alias \
 	nv="nvim"\
@@ -33,9 +40,11 @@ case "$OSTYPE" in
                         speed="... firefox --new-tab https://play.typeracer.com/; exit"\
                         doc="cd ~/Documents/"\
                         z="... zathura"\
+                        ihateelectron='electron_sucks'\
                         die="cd ~/Documents/VeryRare/"\
+                        suggest="gh copilot suggest"\
                         # tboi="cd .local/share/Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents/My\ Games/Binding\ of\ Isaac\ Repentance/"
-                        bottles="... flatpak run com.usebottles.bottles"
+                        # bottles="... flatpak run com.usebottles.bottles"\
                 fi
         ;;
         darwin*)

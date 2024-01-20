@@ -15,10 +15,18 @@ return {
 		local luasnip = require("luasnip")
 
 		local lspkind = require("lspkind")
+		local CheckBackspace = function()
+			local col = vim.fn.col('.') - 1
+			local line = vim.fn.getline('.')
+			return col == 0 or string.match(line:sub(1, col), '%s') ~= nil
+		end
+		-- function CheckBackspace()
+		-- end
+
 
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
-		require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets.lua" } })
-		require("luasnip.loaders.from_snipmate").lazy_load({ paths = { "../../snippets" } })
+		require("luasnip.loaders.from_vscode").lazy_load()
+		require("luasnip.loaders.from_snipmate").lazy_load({ paths = { "~/.config/nvim/snippets" } })
 
 		cmp.setup({
 			completion = {
@@ -44,7 +52,7 @@ return {
 						luasnip.expand()
 					elseif luasnip.expand_or_jumpable() then
 						luasnip.expand_or_jump()
-					elseif check_backspace() then
+					elseif CheckBackspace() then
 						fallback()
 					else
 						fallback()

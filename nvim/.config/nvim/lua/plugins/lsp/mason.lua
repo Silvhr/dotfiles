@@ -5,7 +5,7 @@ return {
 	dependencies = {
 		"neovim/nvim-lspconfig",
 		"williamboman/mason-lspconfig.nvim",
-		"jose-elias-alvarez/null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 		"jayp0521/mason-null-ls.nvim",
 	},
 	config = function()

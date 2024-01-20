@@ -42,7 +42,7 @@ o.shortmess = "filnxtToOFWIcC"
 o.termguicolors = true
 
 o.foldmethod = "indent"
-o.nofoldenable = true
+-- o.nofoldenable = true
 o.foldlevel = 99
 
 o.mouse = 'a'

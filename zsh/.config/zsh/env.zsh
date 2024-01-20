@@ -1,7 +1,7 @@
 # General
-export BROWSER=firefox
+# export BROWSER=firefox
 export EDITOR=nvim
-export TERMINAL=st
+export TERMINAL=kitty
 
 export XDG_STATE_HOME="$HOME"/.local/state
 export XDG_CONFIG_HOME=$HOME/.config
@@ -16,10 +16,10 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export CARGO_HOME="$XDG_DATA_HOME"/CARGO_HOME
 export SSH_ASKPASS=/usr/lib/openssh/gnome-ssh-askpass
-export DISPLAY=:0
+# export DISPLAY=:0
 
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 path+=$CARGO_HOME/bin
-export PATH
+export PATH="~/miniconda3/bin:$PATH"
 # source /usr/share/nvm/init-nvm.sh
 

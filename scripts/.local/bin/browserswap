@@ -1,0 +1,12 @@
+#!/bin/sh
+
+current_default=$(xdg-settings get default-web-browser)
+
+if [ "$current_default" = "firefoxdeveloperedition.desktop" ]; then
+    xdg-settings set default-web-browser google-chrome.desktop
+    notify-send "Default browser set to Google Chrome"
+else
+    xdg-settings set default-web-browser firefoxdeveloperedition.desktop
+    notify-send "Default browser set to Firefox Developer Edition"
+fi
+

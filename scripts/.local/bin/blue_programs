@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Launch blueman-manager in the background
+blueman-manager &
+
+# Launch galaxybudsclient in the background
+galaxybudsclient &
+

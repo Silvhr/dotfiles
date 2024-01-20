@@ -1,0 +1,49 @@
+#!/bin/sh
+#Author: Silvhr
+# Would be nice if it only took book title in fzf
+# requires fzf and zathura
+
+DEFAULT_BOOKS_DIR="/home/silvhr/Documents/books/"
+ALT_BOOKS_DIR="/home/silvhr/Documents/textbook/"
+SYLLABI_BOOKS_DIR="/home/silvhr/Documents/Syllabi/"
+
+# Check for the presence of the flag
+usage() {
+    echo "Usage: $0 [-h] [-t]"
+    echo "  -h  Show usage"
+    echo "  -t  Search in the alternative directory ($ALT_BOOKS_DIR)"
+    echo "  -t  Search in the textbook directory ($ALT_BOOKS_DIR)"
+    echo "  -t  Search in the syllabi directory ($ALT_BOOKS_DIR)"
+    exit 1
+}
+
+# Check for the presence of flags
+while getopts ":hts" opt; do
+    case $opt in
+        h)
+            usage
+            ;;
+        t)
+            BOOKS_DIR="$ALT_BOOKS_DIR"
+            ;;
+        s)
+            BOOKS_DIR="$SYLLABI_BOOKS_DIR"
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            usage
+            ;;
+    esac
+done
+
+BOOKS_DIR="${BOOKS_DIR:-$DEFAULT_BOOKS_DIR}"
+
+# Search for PDF files in the repository and its subdirectories
+pdf_files=$(find "$BOOKS_DIR" -type f -name "*.pdf" | fzf --multi)
+
+# Open selected PDF file(s) in zathura
+if [ -n "$pdf_files" ]; then
+    while IFS= read -r file; do
+        zathura "$file" &
+    done <<< "$pdf_files"
+fi
