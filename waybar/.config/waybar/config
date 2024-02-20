@@ -14,7 +14,6 @@
         "custom/launcher",
         "hyprland/workspaces"
         // "cpu",
-        // "memory",
         // "temperature",
         // "disk",
         //"custom/updates"
@@ -25,6 +24,7 @@
     "modules-right": [
         //"cava",
         "network",
+        "memory",
 	"wireplumber",
         //"pulseaudio",
         "backlight",
@@ -207,8 +207,8 @@
         ],
         "on-scroll-up": "xbacklight -inc 5",
         "on-scroll-down": "xbacklight -dec 5",
-	"on-click" : "xbacklight -set 75",
-	"on-click-right" : "xbacklight -set 0",
+        "on-click" : "xbacklight -set 100",
+        "on-click-right" : "xbacklight -set 0",
         "interval": 2
     },
     "battery": {

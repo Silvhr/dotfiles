@@ -1,3 +1,11 @@
+-- vim.api.nvim_create_autocmd({'BufEnter'}, {
+--     pattern = "github.com_*.txt",
+--     cmd = "set filetype=markdown"
+-- })
+-- vim.api.nvim_create_autocmd({'BufEnter'}, {
+--     pattern = "leetcode.com_*.txt",
+--     cmd = "set filetype=c++"
+-- })
 return {
 	'glacambre/firenvim',
 

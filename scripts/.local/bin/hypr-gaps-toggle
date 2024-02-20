@@ -1,0 +1,15 @@
+#!/bin/sh
+
+
+# Get the current value of gaps_out
+current_gaps_out=$(hyprctl -j getoption general:gaps_out | jq .'int')
+
+# Check if gaps_out is non-zero and act accordingly
+if [ "$current_gaps_out" -ne "0" ]; then
+    # If gaps_out is non-zero, apply the desired settings
+    hyprctl --batch "keyword general:gaps_in 0 ; keyword general:gaps_out 0 ; keyword general:border_size 1 ; keyword decoration:rounding 0 ; keyword decoration:drop_shadow false"
+else
+    # If gaps_out is zero, reload the configuration
+    hyprctl reload
+fi
+

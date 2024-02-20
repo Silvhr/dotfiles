@@ -11,12 +11,21 @@ electron_sucks() {
     command $app --useOzonePlatform=wayland --enable-features=UseOzonePlatform --ozone-platform=wayland "$@"
 }
 
+# zathura_swallow() {
+#     # zathura is a pdf reader that uses wayland
+#     nohup zathura "$@" >/dev/null/ 2>&1 &
+# }
+z() {
+    nohup zathura "$1" >/dev/null 2>&1 &
+}
+
 alias \
 	nv="nvim"\
 	grep="grep --color=auto"\
  	ls="ls -hNF --color=auto --group-directories-first"\
+	mm="micromamba"\
 	proj="cd ~/Projects"\
-        dots="cd ~/dotfiles/"
+    dots="cd ~/dotfiles/"
 
 # this should be set by zsh every time
 case "$OSTYPE" in
@@ -39,10 +48,10 @@ case "$OSTYPE" in
                         todo="... firefox --new-tab https://todoist.com/app/today; exit"\
                         speed="... firefox --new-tab https://play.typeracer.com/; exit"\
                         doc="cd ~/Documents/"\
-                        z="... zathura"\
                         ihateelectron='electron_sucks'\
                         die="cd ~/Documents/VeryRare/"\
-                        suggest="gh copilot suggest"\
+                        suggest="gh copilot suggest"
+                        # z="zathura_swallow"\
                         # tboi="cd .local/share/Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents/My\ Games/Binding\ of\ Isaac\ Repentance/"
                         # bottles="... flatpak run com.usebottles.bottles"\
                 fi

@@ -1,5 +1,5 @@
 return {
-    "nvim-lua/plenary.nvim",     -- lua functions that many plugins use
+    "nvim-lua/plenary.nvim", -- lua functions that many plugins use
 
     --"christoomey/vim-tmux-navigator", -- tmux & split window navigation
 
@@ -15,4 +15,6 @@ return {
     "Mofiqul/dracula.nvim",
     "ThePrimeagen/harpoon",
     "romgrk/fzy-lua-native",
+    -- "folke/zen-mode.nvim",
+    "true-zen.nvim",
 }
