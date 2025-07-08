@@ -50,7 +50,9 @@ case "$OSTYPE" in
                         doc="cd ~/Documents/"\
                         ihateelectron='electron_sucks'\
                         die="cd ~/Documents/VeryRare/"\
-                        suggest="gh copilot suggest"
+                        suggest="gh copilot suggest"\
+                        chrome="google-chrome-stable"\
+                        firefox="firefox-developer-edition"
                         # z="zathura_swallow"\
                         # tboi="cd .local/share/Steam/steamapps/compatdata/250900/pfx/drive_c/users/steamuser/Documents/My\ Games/Binding\ of\ Isaac\ Repentance/"
                         # bottles="... flatpak run com.usebottles.bottles"\

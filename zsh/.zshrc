@@ -11,6 +11,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# source ~/.config/zshrc.d/dots-hyprland.zsh
+
 # # Enable colors and change prompt:
 # autoload -U colors && colors	# Load colors
 # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -25,7 +27,7 @@ plug "$HOME/.config/zsh/alias.zsh"
 plug "$HOME/.config/zsh/env.zsh"
 
 #p10k
-plug "romkatv/powerlevel10k"
+# plug "romkatv/powerlevel10k"
 
 #other plugs
 plug "zsh-users/zsh-autosuggestions"
@@ -68,6 +70,7 @@ compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source ~/.config/zshrc.d/dots-hyprland.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 path+=('/home/silvhr/.local/share/CARGO_HOME/bin/')
@@ -97,3 +100,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/silvhr/.config/.dart-cli-completion/zsh-config.zsh ]] && . /home/silvhr/.config/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

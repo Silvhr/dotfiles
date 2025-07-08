@@ -21,5 +21,13 @@ export SSH_ASKPASS=/usr/lib/openssh/gnome-ssh-askpass
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 path+=$CARGO_HOME/bin
 export PATH="~/miniconda3/bin:$PATH"
+export PATH="$HOME/development/flutter/bin:$PATH"
+export PATH="$HOME/fvm/bin:$PATH"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH=$PATH:/usr/bin/chromedriver
 # source /usr/share/nvm/init-nvm.sh
 
+#flutter development
+export ANDROID_HOME=$HOME/android-sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
