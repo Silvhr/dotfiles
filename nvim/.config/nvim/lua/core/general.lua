@@ -13,7 +13,9 @@ o.relativenumber = true
 o.hlsearch = false
 o.incsearch = true
 
+o.ignorecase = true
 o.smartcase = true
+o.inccommand = "split"
 o.scrolloff = 15
 o.hidden = true
 o.wrap = false
@@ -62,8 +64,7 @@ o.showmatch = true
 local autocmd = vim.api.nvim_create_autocmd   -- Create autocommand
 local augroup = vim.api.nvim_create_augroup   -- Create/get autocommand group
 
-vim.wo.number = true
-
+-- vim.wo.number = true
 augroup('numbertoggle', {clear = true })
 augroup('comments', {clear = true })
 
@@ -78,6 +79,19 @@ autocmd('InsertEnter', {
 	pattern = '*',
 	command = 'set nornu'
 })
+
+
+-- autocmd('BufReadPost', {
+--     group = 'numbertoggle',
+--     callback = function()
+--         -- Check if the buffer has a valid file name and is not a special buffer
+--         if vim.fn.expand('%:p') ~= '' and vim.bo.buftype == '' then
+--           vim.wo.number = true
+--         else
+--           vim.wo.number = false
+--       end
+--     end
+-- })
 -- autocmd('BufLeave', {
 -- 	group = 'numbertoggle',
 -- 	pattern = '*',
@@ -89,4 +103,3 @@ autocmd('InsertLeave', {
 	pattern = '*',
 	command = 'set rnu'
 })
-

@@ -8,13 +8,17 @@ return {
 
     "xiyaowong/nvim-transparent",
     "lukas-reineke/indent-blankline.nvim",
-    "p00f/cphelper.nvim",
     "nvim-telescope/telescope.nvim",
+    {
+        'xeluxee/competitest.nvim',
+        requires = 'muniftanjim/nui.nvim',
+        config = function() require('competitest').setup() end
+    },
     "folke/tokyonight.nvim",
     "ellisonleao/gruvbox.nvim",
     "Mofiqul/dracula.nvim",
     "ThePrimeagen/harpoon",
     "romgrk/fzy-lua-native",
     -- "folke/zen-mode.nvim",
-    "true-zen.nvim",
+    "pocco81/true-zen.nvim",
 }

@@ -28,7 +28,7 @@ return {
 					jdtls = {},
 					cssls = {},
 					dockerls = {},
-					tsserver = {},
+					ts_ls = {},
 					svelte = {},
 					eslint = {
 						filetypes = {

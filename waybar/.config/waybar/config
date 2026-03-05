@@ -25,7 +25,8 @@
         //"cava",
         "network",
         "memory",
-	"wireplumber",
+        "custom/gpu-usage",
+        "wireplumber",
         //"pulseaudio",
         "backlight",
         "battery",
@@ -45,6 +46,12 @@
         "return-type": "json",
         "on-click": "pkill wofi || wofi --show drun -n",
         "on-click-right": "pkill wofi || wofi --show run -n",
+    },
+    "custom/gpu-usage": {
+      "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+      "format": "GPU: {}%",
+      "interval": 1,
+      "return-type": "",
     },
     "hyprland/workspaces": {
         // "format": "{icon} {name}",
@@ -99,22 +106,22 @@
         // "tooltip-format": "{}",
         // "exec-tooltip": "~/.scripts/updates tooltip"
     },
-    "custom/music": {
-        "format": "{icon}{}",
-        "format-icons": {
-            "Playing": " ", // Uncomment if not using the dynamic script
-            "Paused": " ",
-            "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
-        },
-        "escape": true,
-        "tooltip": true,
+    //"custom/music": {
+        //"format": "{icon}{}",
+        //"format-icons": {
+            //"Playing": " ", // Uncomment if not using the dynamic script
+           // "Paused": " ",
+          //  "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
+        //},
+        //"escape": true,
+        //"tooltip": true,
         //"exec": "~/.scripts/caway -b 10 -e",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl previous",
-        "on-scroll-down": "playerctl next",
-        "max-length": 35
-    },
+       // "return-type": "json",
+      //  "on-click": "playerctl play-pause",
+       // "on-scroll-up": "playerctl previous",
+     //   "on-scroll-down": "playerctl next",
+     //   "max-length": 35
+    //},
     "hyprland/window": {
         "format": "{}",
         "separate-outputs": true,

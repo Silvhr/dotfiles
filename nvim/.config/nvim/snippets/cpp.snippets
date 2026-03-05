@@ -23,9 +23,10 @@ snippet snips "all snippets"
 	TopologicalSort
 	InverseFactorial
 	*/
+#
 
 
-snippet cp "test cases template"
+snippet cpt "test cases template"
 	#include<bits/stdc++.h>
 	using namespace std;
 	#define ll long long 
@@ -33,24 +34,39 @@ snippet cp "test cases template"
 	const int MOD=1e9+7;
 	const int INF=1e9;
 	const ll LINF=1e18;
-	void solve()
-	{
-		$1
+     
+	void solve(){
+	    $1
 	}
-	int main()
-	{
-	 ios::sync_with_stdio(0);
-	 cin.tie(0);
-	 //freopen("input.txt", "r", stdin);
-	 //freopen("output.txt", "w", stdout);
-	 int t;
-	 cin>>t;
-	 while(t>0)
-	 {
-	     solve();
-	     t--;
-	 }
-	 return 0;
+	int main(){
+	    ios::sync_with_stdio(0);
+	    cin.tie(0);
+	    //freopen("input.txt", "r", stdin);
+	    //freopen("output.txt", "w", stdout);
+	    int t; cin>>t;
+	    while(t--){
+	        solve();
+        }
+	    return 0;
+	}
+# 
+
+snippet cp "competitive template"
+	#include<bits/stdc++.h>
+	using namespace std;
+	#define ll long long 
+	const int MAX_N=2e5+1;
+	const int MOD=1e9+7;
+	const int INF=1e9;
+	const ll LINF=1e18;
+     
+	int main(){
+	    ios::sync_with_stdio(0);
+	    cin.tie(0);
+	    //freopen("input.txt", "r", stdin);
+	    //freopen("output.txt", "w", stdout);
+     $1
+	    return 0;
 	}
 # 
 
@@ -596,46 +612,21 @@ snippet Trie "Trie Data Structure"
 
 
 snippet FenwickTree "Fenwick Tree"
-	//Implementation:
-	void update(int k,int x,vector<int> &trees)
-	{
-	    for(;k<trees.size();k+=(k&-k))
-	    {
-		trees[k]+=x;
+	void update(int k,int x,vector<int> &trees){
+	    for(;k<trees.size();k+=(k&-k)){
+            trees[k]+=x;
 	    }
 	}
-	int sum(int k,vector<int> &trees)
-	{
+	int sum(int k,vector<int> &trees){
 	    int ans=0;
-	    while(k>=1)
-	    {
-		ans+=trees[k];
-		k-=(k&-k);
+	    while(k>=1){
+            ans+=trees[k];
+            k-=(k&-k);
 	    }
 	    return ans;
 	}
-	int query(int l,int r,vector<int> &trees)
-	{
+	int query(int l,int r,vector<int> &trees){
 	    return sum(r,trees)-sum(l-1,trees);
-	}
-	//Function call:
-	void solve()
-	{
-	      int n;
-	      cin>>n;
-	      int inp;
-	      vector<int> a(n);
-	      for(int i=0;i<n;i++)
-	      {
-		 cin>>inp;
-		 a[i]=inp;
-	      }
-	      vector<int> trees(n+1,0);
-	      for(int i=0;i<n;i++)
-	      {
-		update(i+1,a[i],trees);
-	      }
-	      cout<<"\n"<<query(0,4,trees);
 	}
 
 
@@ -1431,40 +1422,33 @@ snippet IntegerSuffixAutomaton "Suffix Automaton for Integers"
 	}
 
 
-snippet UnionFind "Union Find Algorithm"
-	//Implementation:
-	int parent(int x,vector<int> &link)
-	{
-	    while(link[x]!=x)x=link[x];
-	}
-	 void Union(int x,int y,vector<int> &link,vector<int> &len)
-	 {
-		if(x==y)return;
-		while(x!=link[x])x=link[x];
-		while(y!=link[y])y=link[y];
-		if(x==y)return;
-		if(len[x]<len[y])swap(x,y);
-		link[y]=x;
-		len[x]+=len[y];
-	 }
-	void solve()
-	{
-	    int n;
-	    cin>>n;
-	    vector<int> link(n);
-	    vector<int> len(n);
-	    for(int i=1;i<10;i++)link[i]=i;
-	    for(int i=1;i<10;i++)len[i]=1;
-	    vector<vector<int>> edges{{1,4},{7,4},{6,3},{8,3},{3,2}};
-	    for(vector<int> e:edges)
-		Union(e[0],e[1],link,len);
-	    int ans=0;
-	    for(int i=1;i<10;i++)
-	    {
-		if(link[i]==i)ans++;
-	    } 
-	    cout<<ans;
-	}
+snippet DSU "Union Find Algorithm"
+    class dsu{
+        vector<int> p, r;
+    public:
+
+        dsu(int n){
+            p.resize(n + 1);
+            r.resize(n + 1);
+            iota(p.begin(), p.end(), 0);
+            fill(r.begin(), r.end(), 1);
+        }
+        int find(int a){
+            if(a == p[a]) return a;
+            return p[a] = find(p[a]);
+        }
+        void u(int a, int b){
+            int pa = find(a);
+            int pb = find(b);
+            if(pa == pb) return;
+            if(r[pa] < r[pb]) swap(pa, pb);
+            r[pa] += r[pb];
+            p[pb] = pa;
+        }
+        int gr(int a){
+            return r[find(a)];
+        }
+    };
 
 
 snippet TopologicalSort "Topological Sort"

@@ -3,4 +3,6 @@ zsh/.config/zsh/zsh-autosuggestions/
 zsh/.config/zsh/zsh-syntax-highlighting/
 tmux/.config/tmux/tpm/
 tmux/.config/tmux/plugins/
-*.lazy-lock.json
+# /nvim/**/*.lazy-lock.json
+nvim/.config/nvim/lazy-lock
+scripts/.local/bin/claude
